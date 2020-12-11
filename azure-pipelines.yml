@@ -15,9 +15,7 @@ steps:
 
 - script: |
     java -jar codacy-coverage-reporter-assembly-0.0.1-SNAPSHOT.jar report --project-token 123
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
     git log | echo
-    echo $(Build.SourceVersion)
-    echo $TF_BUILD
+    echo 'HERE'$(Build.SourceVersion)'HERE'
+    echo 'HERE2'$TF_BUILD'HERE2'
   displayName: 'Run a multi-line script'
